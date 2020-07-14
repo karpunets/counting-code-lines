@@ -6,7 +6,7 @@ import lombok.RequiredArgsConstructor;
 
 import java.io.File;
 import java.util.Arrays;
-import java.util.Set;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -19,9 +19,9 @@ public class FolderAnalyzer implements FileAnalyzer {
         if (file.isDirectory()) {
             File[] listFiles = file.listFiles();
             Stream<File> streamFiles = listFiles == null ? Stream.empty() : Arrays.stream(listFiles);
-            Set<AnalyzeReport> reports = streamFiles
+            List<AnalyzeReport> reports = streamFiles
                     .map(this::analyze)
-                    .collect(Collectors.toSet());
+                    .collect(Collectors.toList());
             return new FolderReport(file, reports);
         } else {
             return decorated.analyze(file);

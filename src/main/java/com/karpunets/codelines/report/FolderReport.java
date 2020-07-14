@@ -3,12 +3,12 @@ package com.karpunets.codelines.report;
 import lombok.RequiredArgsConstructor;
 
 import java.io.File;
-import java.util.Set;
+import java.util.List;
 
 @RequiredArgsConstructor
 public class FolderReport implements AnalyzeReport {
     private final File folder;
-    private final Set<AnalyzeReport> reports;
+    private final List<AnalyzeReport> reports;
 
     @Override
     public long countCodeLines() {
@@ -26,7 +26,7 @@ public class FolderReport implements AnalyzeReport {
         reports.forEach(report -> builder
                 .append(System.lineSeparator())
                 .append("\t")
-                .append(report.getReport().replace(System.lineSeparator() + "\t",System.lineSeparator() +  "\t\t")));
+                .append(report.getReport().replace(System.lineSeparator() + "\t", System.lineSeparator() + "\t\t")));
         return builder.toString();
     }
 }
