@@ -36,7 +36,7 @@ public class Application {
 
     @RequiredArgsConstructor
     private enum CliOption {
-        FILENAME("f", "filename", true, "file name to counting code lines");
+        FILENAME("f", "filename", true, "filename or folder path for counting code lines");
 
         final String opt;
         final String longOpt;
