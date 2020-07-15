@@ -5,9 +5,9 @@ import com.karpunets.codelines.analyze.JavaFileAnalyzer;
 
 public class Starter {
 
-    public static void main(String[] args) {
-        JavaFileAnalyzer javaFileAnalyzer = new JavaFileAnalyzer();
-        FolderAnalyzer folderAnalyzer = new FolderAnalyzer(javaFileAnalyzer);
-        new Application(folderAnalyzer).run(args);
-    }
+  public static void main(String[] args) {
+    JavaFileAnalyzer javaFileAnalyzer = new JavaFileAnalyzer();
+    FolderAnalyzer folderAnalyzer = new FolderAnalyzer(javaFileAnalyzer);
+    new Application(folderAnalyzer).run(args);
+  }
 }

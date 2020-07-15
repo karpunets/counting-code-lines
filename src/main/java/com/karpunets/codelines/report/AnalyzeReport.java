@@ -2,7 +2,7 @@ package com.karpunets.codelines.report;
 
 public interface AnalyzeReport {
 
-    long countCodeLines();
+  long countCodeLines();
 
-    String getReport();
+  String getReport();
 }

@@ -6,5 +6,5 @@ import java.io.File;
 
 public interface FileAnalyzer {
 
-    AnalyzeReport analyze(File file);
+  AnalyzeReport analyze(File file);
 }
